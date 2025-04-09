@@ -8,7 +8,7 @@ const Book = (props) => {
     const {_id,name,author,description,price,availble,image}=props.book;
     const history=useNavigate();
     const deleteHandler =()=>{
-      axios.delete(`http://localhost:3001/books/${_id}`)
+      axios.delete(`https://mern-book-store-app-a3mt.onrender.com/books/${_id}`)
       .then(res=>res.data).then(()=>history("/")).then(()=>history("/books"))
     }
 
