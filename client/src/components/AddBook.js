@@ -32,7 +32,7 @@ const handleChange = (e) =>{
 }
 
 const sendRequest = async() =>{
-  await axios.post("http://localhost:3001/books",{
+  await axios.post("https://mern-book-store-app-a3mt.onrender.com/books",{
     name:String(inputs.name),
     author:String(inputs.author),
     description:String(inputs.description),
