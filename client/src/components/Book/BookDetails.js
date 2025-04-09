@@ -16,7 +16,7 @@ const BookDetails = () => {
 
   useEffect(()=>{
     const fetchHandler = async ()=>{
-      return await axios.get(`http://localhost:3001/books/${id}`)
+      return await axios.get(`https://mern-book-store-app-a3mt.onrender.com/books/${id}`)
       .then((res)=>res.data).then(data=>setInputs(data.book))
 
     };
@@ -26,7 +26,7 @@ const BookDetails = () => {
   },[id]);
 
   const sendRequest = async() =>{
-    await axios.put(`http://localhost:3001/books/${id}`,{
+    await axios.put(`https://mern-book-store-app-a3mt.onrender.com/books/${id}`,{
       name:String(inputs.name),
       author:String(inputs.author),
       description:String(inputs.description),
