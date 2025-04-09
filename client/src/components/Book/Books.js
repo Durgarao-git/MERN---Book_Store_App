@@ -4,7 +4,7 @@ import Book from '../Book/Book';
 import './Books.css';
 
 
-const URL = "http://localhost:3001/books";
+const URL = "https://mern-book-store-app-a3mt.onrender.com/books";
 
 const fetchHandler = async () => {
     return await axios.get(URL).then((res) => res.data)
